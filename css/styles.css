@@ -46,7 +46,7 @@ ul {
 }
 
 section {
-  padding-top: 6rem;
+  padding-top: 12rem;
   margin-bottom: 12rem;
 }
 
@@ -68,6 +68,7 @@ section {
   background-color: var(--main-orange);
   color: white;
   font-size: 2rem;
+  font-family: var(--font-elegant);
   letter-spacing: 1px;
   transition: .3s;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -81,8 +82,9 @@ header {
   left: 0;
   width: 100%;
   height: 6rem;
-  background-color: black;
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  /* background-color: black; */
+  /* box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15); */
 }
 
 .header-container {
@@ -118,50 +120,52 @@ header {
 /* ===== HERO ===== */
 
 .hero-section {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), transparent), url(/assets/images/hero.jpg);
+  background: url(../assets/images/pizza1.jpg);
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 
-  height: 65rem;
+  height: 100vh;
   margin-bottom: 3rem;
+  position: relative;
 }
 
 
 .hero-content {
+  position: absolute;
+  top: 20rem;
   height: 100%;
   width: 60%;
   padding: 0 0 0 12rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 3rem;
+  gap: 2.5rem;
   color: white;
-}
-
-.hero-btn {
-  margin-top: 2rem;
-  padding: 1.5rem 4rem;
-}
-
-.hero-btn:hover {
-  background-color: #e17229;
 }
 
 .hero-content h1 {
   font-family: var(--font-main);
-  font-size: 9rem;
+  font-size: 8rem;
   line-height: 0.8;
-
 }
 
 .hero-content p {
   font-size: 2.5rem;
-  font-family: sans-serif;
-  line-height: 1.3;
+  font-family: var(--font-para);
+  font-weight: 100;
+  line-height: 1.5;
   padding-right: 10rem;
+}
+
+.hero-btn {
+  /* margin-top: rem; */
+  padding: 1.2rem 3rem;
+}
+
+.hero-btn:hover {
+  background-color: #e17229;
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -338,7 +342,7 @@ ion-icon {
   flex-basis: 35%;
   width: 100%;
   height: 100%;
-  background: url(/assets/images/restaurant.jpg) center / cover no-repeat;
+  background: url(../assets/images/restaurant.jpg) center / cover no-repeat;
 }
 
 .location-content {
@@ -377,7 +381,7 @@ ion-icon {
 
 .map-bg {
   flex-basis: 65%;
-  background: url(/assets/mapMKE.png) center / cover no-repeat;
+  background: url(../assets/mapMKE.png) center / cover no-repeat;
   width: 100%;
   filter: grayscale(1);
 }
