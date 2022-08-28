@@ -57,8 +57,8 @@ section {
 
 .subheading {
   font-family: var(--font-elegant);
-  font-size: 4rem;
-  margin-bottom: 2rem;
+  font-size: 5rem;
+  margin-bottom: 4rem;
   color: var(--very-dark-yellow);
 }
 
@@ -74,6 +74,19 @@ section {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
+.tomato-logo {
+  position: relative;
+  margin-bottom: 4rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.text-logo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 /* ===== HEADER ===== */
 
 header {
@@ -81,40 +94,69 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 6rem;
+  height: 8rem;
   z-index: 10;
-  /* background-color: black; */
-  /* box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15); */
+  transition: .2s;
+}
+
+.header-background {
+  background-color: rgba(22, 10, 2, 0.812);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.15);
 }
 
 .header-container {
   height: 100%;
-  padding: 0 6rem;
+  padding: 0 10rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  height: 6rem;
+  height: 5rem;
 
 }
 
 .logo img {
   height: 100%;
-  background-color: white;
   padding: 0.8rem 2rem;
 }
 
 .nav-items {
   list-style: none;
   display: flex;
-  gap: 5rem;
+  align-items: center;
+  gap: 3rem;
 }
 
 .nav-link {
+  position: relative;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 100;
+  transition: .2s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--main-orange);
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link:hover::after {
+  color: #eba170;
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* ===== HERO ===== */
@@ -136,7 +178,6 @@ header {
 .hero-content {
   position: absolute;
   top: 20rem;
-  height: 100%;
   width: 60%;
   padding: 0 0 0 12rem;
   display: flex;
@@ -145,13 +186,13 @@ header {
   color: white;
 }
 
-.hero-content h1 {
+.hero-title {
   font-family: var(--font-main);
   font-size: 8rem;
   line-height: 0.8;
 }
 
-.hero-content p {
+.hero-description {
   font-size: 2.5rem;
   font-family: var(--font-para);
   font-weight: 100;
@@ -229,25 +270,24 @@ ion-icon {
 /* ===== MENU SECTION ===== */
 
 .menu-section {
-  background-color: #fcefe7;
+  background-color: #171303;
+  color: white;
   margin-bottom: 0;
   padding-bottom: 12rem;
 }
 
-
-
 .menu-section h2 {
-  margin-bottom: 1rem;
+  color: white;
 }
 
-.menu .menu-section__content {
+.menu-section__content {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  /* gap: 1rem; */
 }
 
 .menu-section__content .btn {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .menu-section__description {
@@ -259,12 +299,13 @@ ion-icon {
 
 .menu-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
 }
 
 .menu-card {
   height: 30rem;
+  border-radius: 1rem;
 }
 
 .menu-card__text {
@@ -276,7 +317,8 @@ ion-icon {
 }
 
 .menu-card__text p {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 100;
   transition: .3s;
 }
 
@@ -285,35 +327,62 @@ ion-icon {
 }
 
 .menu-card:nth-of-type(1) {
-  background: linear-gradient(transparent 40%, hsla(23, 86%, 19%, 0.866)), url(../assets/images/pizza2.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(transparent 40%, #171303), url(../assets/images/pizza2.jpg) center / cover no-repeat;
+  ;
 }
 
 .menu-card:nth-of-type(2) {
-  background: linear-gradient(transparent 20%, hsla(23, 86%, 19%, 0.797)), url(../assets/images/pasta1.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(transparent 20%, #171303), url(../assets/images/pasta1.jpg) center / cover no-repeat;
+  ;
 }
 
 .menu-card:nth-of-type(3) {
-  background: linear-gradient(transparent 40%, hsla(23, 86%, 19%, 0.797)), url(../assets/images/lasagna.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(transparent 40%, #171303), url(../assets/images/lasagna.jpg) center / cover no-repeat;
+  ;
 }
 
 .menu-card:nth-of-type(4) {
-  background: linear-gradient(transparent 20%, hsla(23, 86%, 19%, 0.797)), url(../assets/images/pasta2.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(transparent 20%, #171303), url(../assets/images/pasta2.jpg) center / cover no-repeat;
+  ;
+}
+
+.menu-card:nth-of-type(5) {
+  background: linear-gradient(transparent 20%, #171303), url(../assets/images/cannelloni.jpg) center / cover no-repeat;
+  ;
+}
+
+.menu-card:nth-of-type(6) {
+  background: linear-gradient(transparent 20%, #171303), url(../assets/images/tiramisu.jpg) center / cover no-repeat;
+
 }
 
 .menu-btn {
   text-align: center;
+}
+
+/* ===== FIREWOOD SECTION ===== */
+.oven-section {
+  height: 80vh;
+  padding-top: 0;
+  margin-bottom: 0;
+  background: linear-gradient(rgba(23, 19, 3, 0.6) 70%, rgba(23, 19, 3, 1) 90%), url(../assets/images/oven.jpg) center / cover no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.oven-content h2 {
+  font-size: 7rem;
+  color: white
+}
+
+.oven-section__description {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  line-height: 1.6;
 }
 
 

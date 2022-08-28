@@ -17,13 +17,17 @@
     />
     <title>Tomato Pizzeria</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/main.js" defer></script>
   </head>
   <body>
     <header>
       <div class="header-container">
         <div class="logo">
           <a href="/">
-            <img src="./assets/logo/vector/default-monochrome.svg" alt="Logo" />
+            <img
+              src="./assets/logo/vector/default-monochrome-white.svg"
+              alt="Logo"
+            />
           </a>
         </div>
 
@@ -33,6 +37,16 @@
             <li><a class="nav-link" href="#aboutus">Our Story</a></li>
             <li><a class="nav-link" href="#menu">Menu</a></li>
             <li><a class="nav-link" href="#location">Location</a></li>
+            <li>
+              <a class="nav-link" href="www.facebook.com"
+                ><ion-icon name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="nav-link" href="www.facebook.com"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -41,8 +55,8 @@
       <!-- ==== HERO SECTION ==== -->
       <section class="hero-section">
         <div class="hero-content">
-          <h1>Benvenuti to our restaurant</h1>
-          <p>
+          <h1 class="hero-title">Benvenuti to our restaurant</h1>
+          <p class="hero-description">
             Traditional Italian cousine with the best local ingredients in the
             heart of Milwaukee.
           </p>
@@ -55,7 +69,10 @@
       <!-- ==== ABOUT US ==== -->
       <section id="aboutus" class="about-section">
         <div class="container">
-          <h2 class="subheading">Our Story</h2>
+          <div class="text-logo">
+            <img class="tomato-logo" src="./assets/logo_tomato_b.svg" alt="" />
+            <h2 class="subheading">Our Story</h2>
+          </div>
           <div class="about-content">
             <div class="about-img">
               <img src="./assets/images/casaItaliana.jpg" alt="" />
@@ -109,7 +126,10 @@
       <!-- ==== MENU ==== -->
       <section id="menu" class="menu-section">
         <div class="container menu-section__content">
-          <h2 class="subheading">Our traditional menu</h2>
+          <div class="text-logo">
+            <img class="tomato-logo" src="./assets/logo_tomato_w.svg" alt="" />
+            <h2 class="subheading">Our traditional menu</h2>
+          </div>
           <p class="menu-section__description">
             Our pizzas dough and pasta are made daily from our local partners
             who provide excellent quality ingredients. The cheese we use in our
@@ -133,9 +153,30 @@
             <div class="menu-card">
               <div class="menu-card__text"><p>Shrimp Spaghetti</p></div>
             </div>
+            <div class="menu-card">
+              <div class="menu-card__text"><p>Sweet Ricotta Cannelloni</p></div>
+            </div>
+            <div class="menu-card">
+              <div class="menu-card__text"><p>House Tiramisu</p></div>
+            </div>
           </div>
           <div class="menu-btn">
             <a href="#" class="btn hero-btn">Full Menu</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==== OVEN ==== -->
+      <section class="oven-section">
+        <div class="container">
+          <div class="oven-content">
+            <h2 class="subheading">Firewood Oven</h2>
+            <p class="oven-section__description">
+              We use the best Wisconsin eco-friendly firewood to bake our pizzas
+              to perfection. The sweet smoked flavor give our products a
+              distinctive flavor that only our firewood ovens can provide. Join
+              us for lunch or dinner today.
+            </p>
           </div>
         </div>
       </section>
