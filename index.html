@@ -23,7 +23,10 @@
       <div class="header-container">
         <div class="logo">
           <a href="/">
-            <img src="./assets/logo/vector/default-monochrome.svg" alt="Logo" />
+            <img
+              src="../assets/logo/vector/default-monochrome.svg"
+              alt="Logo"
+            />
           </a>
         </div>
 
@@ -47,7 +50,7 @@
             ingredients.
           </p>
           <div>
-            <a href="#" class="hero-btn">Join Us</a>
+            <a href="#aboutus" class="btn hero-btn">Learn More</a>
           </div>
         </div>
       </section>
@@ -73,13 +76,16 @@
             </div>
           </div>
           <div class="about-steps">
+            <h3 class="subheading about-steps__heading">
+              Join us today for lunch or dinner
+            </h3>
             <ul class="steps-items">
               <li class="step-item">
                 <ion-icon name="call-outline"></ion-icon>
                 <h3 class="step-title">Reserve</h3>
                 <p class="step-description">
                   Call us or go online to reserve a table in our modern
-                  restaurant or in our patio
+                  restaurant or in our patio.
                 </p>
               </li>
               <li class="step-item">
@@ -105,9 +111,15 @@
 
       <!-- ==== MENU ==== -->
       <section id="menu" class="menu-section">
-        <div class="container">
+        <div class="container menu-section__content">
           <h2 class="subheading">Our traditional menu</h2>
-          <di class="menu-cards">
+          <p class="menu-section__description">
+            Our pizzas dough and pasta are made daily from our local partners
+            who provide excellent quality ingredients. The cheese we use in our
+            recipes is produced by local farmers, which gives our traditional
+            Italian dishes a special touch.
+          </p>
+          <div class="menu-cards">
             <div class="menu-card">
               <div class="menu-card__text">
                 <p>Pizza Margarita</p>
@@ -124,14 +136,34 @@
             <div class="menu-card">
               <div class="menu-card__text"><p>Shrimp Spaghetti</p></div>
             </div>
-          </di>
+          </div>
+          <div class="menu-btn">
+            <a href="#" class="btn hero-btn">Full Menu</a>
+          </div>
         </div>
       </section>
 
       <!-- ==== LOCATION ==== -->
       <section id="location" class="location-section">
-        <div class="container">
-          <h2 class="subheading">Location</h2>
+        <div class="location-wrapper">
+          <div class="location-bg"></div>
+          <div class="location-content">
+            <h2 class="subheading">Location</h2>
+            <address>
+              <p class="location-address">
+                414 E Wisconsin Ave. <br />
+                Milwaukee, Wi 53201
+              </p>
+            </address>
+            <a class="location-phone" href="tel:+14141236789"
+              ><ion-icon name="call-outline"></ion-icon> 414-123-6789</a
+            >
+            <a class="location-email" href="mailto:contact@tomatopizzeria.com"
+              ><ion-icon name="mail-outline"></ion-icon
+              >contact@tomatopizzeria.com</a
+            >
+          </div>
+          <div class="map-bg"></div>
         </div>
       </section>
     </main>
